@@ -1,0 +1,135 @@
+:root {
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --GreyBg: hsl(0, 0%, 96%);
+  --GreyText: rgb(190, 190, 100);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+.unique-footer .footer {
+  background: var(--GreyBg);
+  padding: 2rem 0;
+}
+
+.unique-footer .secContainer {
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+  grid-template-columns: repeat(3, 1fr); 
+}
+
+.unique-footer .footerLogo {
+  padding-bottom: 0.5rem;
+}
+
+.unique-footer .logo {
+  color: var(--blackColor);
+  font-weight: 500;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.unique-footer .logo .icon {
+  font-size: 25px;
+  color: var(--PrimaryColor);
+  margin-top: 0.5rem;
+}
+
+.unique-footer .socials {
+  display: flex;
+  gap: 0.5rem;
+  margin: auto;
+  justify-content: center;
+}
+
+.unique-footer .socials .icon {
+  font-size: 30px;
+  background: var(--PrimaryColor);
+  border-radius: 50%;
+  padding: 8px;
+  color: var(--whiteColor);
+}
+
+.unique-footer .socials .icon:hover {
+  background: var(--blackColor);
+}
+
+.unique-footer .footerLinks {
+  display: grid;
+  row-gap: 0.2rem;
+}
+
+.unique-footer .footerLinks .linkTitle {
+  padding-bottom: 0.5rem;
+  color: var (--blackColor);
+  font-weight: 700;
+}
+
+.unique-footer .footerLinks li:hover {
+  transform: translateX(10px);
+  color: var(--PrimaryColor);
+}
+
+.unique-footer .news .newstitle  {
+  padding-bottom: 1.5rem;
+  color: var(--blackColor);
+  font-weight: 700;
+}
+.unique-footer .emailBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.unique-footer .emailInput {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--inputColor);
+  border-radius: 2.25rem;
+  padding-right: 4rem; 
+  box-sizing: border-box;
+  
+}
+
+.unique-footer .sendBtn {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  border: none;
+  background-color: var(--PrimaryColor);
+  color: var(--whiteColor);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-top-right-radius: 2.25rem;
+  border-bottom-right-radius: 2.25rem;
+  border-top-left-radius: 2.25rem;
+  border-bottom-left-radius: 2.25rem;
+}
+
+.unique-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.unique-footer a:hover {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .unique-footer .secContainer {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .unique-footer .secContainer {
+    padding: 2rem;
+  }
+}

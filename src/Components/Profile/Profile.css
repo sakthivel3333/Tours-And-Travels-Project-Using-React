@@ -1,0 +1,117 @@
+:root {
+    --PrimaryColor: #f67009;
+    --HoverColor: #cb5e0b;
+    --whiteColor: white;
+    --blackColor: #2e2e2e;
+    --textColor: #79797c;
+    --WhiteColorDeam: #ededed;
+    --GreyBg: whitesmoke;
+    --GreyText: #bebe64;
+    --inputColor: #f8f6f7;
+  }
+  
+  .profileContainer {
+    max-width: 1000px;
+    margin: 8rem auto;
+    padding: 2rem;
+    background-color: var(--whiteColor);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profileHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .profilePictureContainer {
+    position: relative;
+  }
+  
+  .profilePicture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid var(--PrimaryColor);
+  }
+  
+  .editOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border-radius: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .profilePictureContainer:hover .editOverlay {
+    opacity: 1;
+  }
+  
+  .editButton {
+    background-color: var(--PrimaryColor);
+    color: var(--whiteColor);
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 51px;
+  }
+  
+  .profileName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blackColor);
+    text-align: center;
+  }
+  
+  .profileDetails {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .profileDetail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .profileDetailLabel {
+    font-weight: bold;
+    color: var(--PrimaryColor);
+    flex: 1;
+    max-width: 100px;
+  }
+  
+  .profileDetailValue {
+    color: var(--blackColor);
+    flex: 2;
+  }
+  
+  @media (max-width: 768px) {
+    .profileContainer {
+      padding: 1rem;
+    }
+  
+    .profileDetail {
+      flex-direction: column;
+      margin-bottom: 0.5rem;
+    }
+  
+    .profileDetailLabel {
+      margin-bottom: 0.5rem;
+    }
+  }
+  

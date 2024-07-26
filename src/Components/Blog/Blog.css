@@ -1,0 +1,99 @@
+:root {
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDim: hsl(0, 0%, 93%);
+  --GreyBg: hsl(0, 0%, 96%);
+  --GreyText: rgb(190, 190, 100);
+  --inputColor: hsl(330, 12%, 97%);
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.45);
+}
+
+/* Blog.css */
+
+.blog {
+  padding-top: 110px;
+}
+
+.blog .mainContainer {
+  display: grid;
+  gap: 1rem;
+}
+
+.blog .mainContainer .singlePost {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.blog .mainContainer .singlePost .imgDiv {
+  height: 200px;
+  width: 100%;
+  border-radius: 1rem;
+  border: 5px solid var(--GreyBg);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.blog .mainContainer .singlePost .imgDiv:hover img {
+  transform: scale(1.1);
+  transition: transform 3s ease;
+}
+
+.blog .mainContainer .singlePost .imgDiv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog .mainContainer .singlePost .postDetails h3 {
+  color: var(--blackColor);
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.blog .mainContainer .singlePost .postDetails p {
+  font-size: 13px;
+  color: var(--textColor);
+  font-weight: 500;
+}
+
+.blog .mainContainer .singlePost a {
+  font-size: 15px;
+  color: var(--PrimaryColor);
+  font-weight: 600;
+  padding-top: 0.5rem;
+  width: max-content;
+}
+
+.blog .mainContainer .singlePost a:hover {
+  color: var(--HoverColor);
+  font-weight: 600;
+}
+
+.blog .mainContainer .singlePost a:hover .icon {
+  transform: translateX(10px);
+  transition: transform 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .blog .mainContainer .singlePost {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .blog .mainContainer .singlePost .imgDiv {
+    grid-column: 1;
+  }
+
+  .blog .mainContainer .singlePost .postDetails {
+    grid-column: 2;
+  }
+}
+
+@media screen and (min-width: 884px) {
+  .blog .mainContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

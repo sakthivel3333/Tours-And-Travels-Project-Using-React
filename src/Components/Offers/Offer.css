@@ -1,0 +1,183 @@
+.offer-component {
+    :root {
+      --PrimaryColor: hsl(26, 93%, 50%);
+      --HoverColor: hsl(26, 90%, 42%);
+      --whiteColor: hsl(0, 0%, 100%);
+      --blackColor: hsl(0, 0%, 18%);
+      --textColor: hsl(240, 1%, 48%);
+      --whiteColorDim: hsl(0, 0%, 93%);
+      --GreyBg: hsl(0, 0%, 96%);
+      --GreyText: rgb(190, 190, 100);
+      --inputColor: hsl(330, 12%, 97%);
+    }
+  
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .section {
+      padding: 2rem 0;
+    }
+  
+    .secContainer {
+      text-align: center;
+    }
+  
+    .secIntro {
+      margin-bottom: 2rem;
+    }
+  
+    .secTitle {
+      font-size: 1.5rem;
+      color: var(--blackColor);
+      margin-bottom: 0.5rem;
+    }
+  
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    
+    }
+  
+    .filters select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid var(--GreyText);
+      border-radius: 0.5rem;
+      background-color: var(--whiteColor);
+      color: var(--blackColor);
+      cursor: pointer;
+      transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+      width: 100%; /* Full width for small screens */
+      max-width: 200px;
+    }
+  
+    .filters select:hover {
+      border-color: var(--PrimaryColor);
+    }
+  
+    .filters select:focus {
+      outline: none;
+      border-color: var(--PrimaryColor);
+      box-shadow: 0 0 0 2px rgba(38, 128, 235, 0.5);
+    }
+  
+    .mainContent {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  
+    @media (max-width: 768px) {
+      .mainContent {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    .singleOffer {
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.45);
+    }
+  
+    .destImage {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 1rem 1rem 0 0;
+    }
+  
+    .destImage img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  
+    .discount {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: var(--PrimaryColor);
+      color: var(--whiteColor);
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+  
+    .offerBody {
+      padding: 1rem;
+      text-align: left;
+    }
+  
+    .price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+  
+    .price h4 {
+      color: var(--blackColor);
+      font-size: 1.5rem;
+    }
+  
+    .status {
+      background: var(--GreyBg);
+      color: var(--PrimaryColor);
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+    }
+  
+    .amenities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .singleAmenities {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  
+    .icon {
+      font-size: 1.2rem;
+      color: var(--textColor);
+    }
+  
+    .location {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    button.btn {
+      background: var(--PrimaryColor);
+      color: var(--whiteColor);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+  
+    button.btn:hover {
+      background: var(--HoverColor);
+    }
+  }
+  
+  .offer-component.offer-component--not-home .secIntro {
+    padding-top: 35px; 
+  }
+  

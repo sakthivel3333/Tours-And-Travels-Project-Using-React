@@ -1,0 +1,158 @@
+:root {
+  --PrimaryColor: #f67009;
+  --HoverColor: #cb5e0b;
+  --whiteColor: white;
+  --blackColor: #2e2e2e;
+  --textColor: #79797c;
+  --WhiteColorDeam: #ededed;
+  --GreyBg: whitesmoke;
+  --GreyText: #bebe64;
+  --inputColor: #f8f6f7;
+}
+
+.home {
+  height: 80vh;
+  background: linear-gradient(
+      rgba(33, 33, 33, 0.522),
+      rgba(33, 33, 33, 0.522)
+    ),
+    url("../../Asset/1714297868681.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+
+.secContainer {
+  .homeText {
+    text-align: center;
+
+    .title {
+      color: var(--whiteColor);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 2.5rem;
+    }
+
+    .subtitle {
+      color: var(--whiteColor);
+      opacity: 0.9;
+      font-size: 13px;
+      font-weight: 300;
+      padding: 1rem 0;
+      max-width: 70%;
+      text-align: center;
+      margin: auto;
+    }
+
+    .btn {
+      width: 50%;
+      padding: 0.6rem 1.5rem;
+      color: var(--whiteColor);
+      font-weight: 600;
+
+      a {
+        text-decoration: none;
+        color: var(--whiteColor);
+      }
+
+      &:hover {
+        background-color: var(--HoverColor);
+      }
+    }
+  }
+
+  .homeCard {
+    width: 80%;
+    border-radius: 2rem;
+    padding: 2rem;
+    background: var(--whiteColor);
+    position: absolute;
+    gap: 1rem;
+    justify-content: center;
+    bottom: -25%;
+    transform: translateX(-50%);
+    left: 50%;
+    box-shadow: 0 2px 8px 4px rgba(178, 178, 178, 0.45);
+
+    .btn {
+      transform: translateY(15px);
+      &:hover {
+        background-color: var(--HoverColor);
+      }
+    }
+  }
+
+  .locationDiv,
+  .disDiv,
+  .priceDiv {
+    width: 100%;
+
+    label {
+      display: block;
+      color: var(--textColor);
+      font-weight: 500;
+      font-size: 13px;
+      padding-bottom: 0.4rem;
+    }
+
+    input {
+      width: 100%;
+      background-color: var(--inputColor);
+      border-radius: 10px;
+      border: none;
+      padding: 10px;
+      font-size: 13px;
+      font-weight: 500;
+
+      &::placeholder {
+        font-size: 13px;
+        opacity: 0.5;
+        font-weight: 400;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .home {
+    .secContainer {
+      .homeCard {
+        bottom: -50px;
+        width: 90%;
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}
+@media screen and (min-width: 556px) {
+  .home {
+    .secContainer {
+     .homeText{
+      .title{
+        font-size: 2.5rem;
+      }
+      .subtitle{
+        font-size: 18px;
+
+      }
+     }
+    }
+  }
+}
+.datePickerInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

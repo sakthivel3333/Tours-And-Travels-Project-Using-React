@@ -1,0 +1,119 @@
+/* Wishlist.css */
+
+.wishlist {
+  padding-top: 8rem; /* Adjust as needed */
+}
+
+.secTitle {
+  color: var(--blackColor); 
+  line-height: 1.5rem; 
+  padding-bottom: 0.5rem; 
+}
+
+.mainContent {
+  padding: 2rem 0; 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1rem; 
+}
+
+.singleDestination {
+  overflow: hidden;
+  border-radius: 1rem; /* Adjust border radius as needed */
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.45); /* Adjust box-shadow as needed */
+}
+
+.destImage {
+  height: 200px; /* Adjust image height as needed */
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.destImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.overlayInfo {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.846), rgba(0, 0, 0, 0.759));
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  overflow: hidden;
+  padding: 0; /* Adjust padding as needed */
+}
+
+.overlayInfo h3 {
+  color: var(--whiteColor); /* Adjust text color as needed */
+  font-weight: 600;
+  margin-bottom: 0.5rem; /* Adjust margin as needed */
+}
+
+.overlayInfo p {
+  color: var(--whiteColor); /* Adjust text color as needed */
+  opacity: 0.7;
+  font-size: 13px; /* Adjust font size as needed */
+}
+
+.overlayInfo .icon {
+  position: absolute;
+  right: 10px; /* Adjust position as needed */
+  bottom: 10px; /* Adjust position as needed */
+  background: var(--PrimaryColor); /* Use your color variable */
+  font-size: 2.5rem; /* Adjust font size as needed */
+  border-radius: 50%;
+  color: var(--whiteColor); /* Adjust text color as needed */
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+
+  &:hover {
+    background: var(--blackColor); /* Adjust hover background color */
+    border: 1px solid var(--PrimaryColor); /* Adjust border color on hover */
+  }
+}
+
+.destFooter {
+  padding: 1rem; /* Adjust padding as needed */
+}
+
+.number {
+  font-size: 2rem; /* Adjust font size as needed */
+  font-weight: 700;
+  color: var(--blackColor); /* Use your preferred color variable */
+  position: absolute;
+}
+
+.destText {
+  margin-top: auto; /* Align content at the bottom */
+}
+
+.destText h6 {
+  font-size: 1rem; /* Adjust font size as needed */
+  font-weight: 600;
+  color: var(--blackColor); /* Use your preferred color variable */
+  margin-bottom: 0.5rem; /* Adjust margin as needed */
+}
+
+.destText .icon {
+  font-size: 0.7rem; 
+  color: var(--blackColor); 
+  margin-right: 0.25rem;
+}
+
+.wishlistIcon {
+  position: absolute;
+  top: 1rem; 
+  right: 1rem;
+  cursor: pointer;
+}
+
+.wishlistIcon .liked {
+  color: red; 
+}

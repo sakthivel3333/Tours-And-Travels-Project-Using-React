@@ -1,0 +1,173 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.signup-brand {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.login-link {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.login-link a {
+  color: #e40b70;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.signup-form {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+.signup-form label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+}
+
+.signup-form input {
+  width: calc(100% - 22px);
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.signup-form input:focus {
+  border-color: #e40b70;
+}
+
+.signup-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: hsl(26, 93%, 50%);;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.signup-form button:hover {
+  background-color: hsl(26, 93%, 50%);
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.or-text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+.social-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-buttons button {
+  width: calc(50% - 5px);
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-buttons .google-button {
+  background-color: hsl(26, 93%, 50%);
+  color: white;
+}
+
+.social-buttons .google-button:hover {
+  background-color: hsl(26, 93%, 50%);
+  transform: scale(1.05);
+}
+
+.social-buttons .facebook-button {
+  background-color:hsl(26, 93%, 50%);
+  color: white;
+}
+
+.social-buttons .facebook-button:hover {
+  background-color:hsl(26, 93%, 50%);;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .signup-container {
+    padding: 10px;
+    margin-top: 80px;
+  }
+
+  .signup-form {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .signup-brand {
+    font-size: 30px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+  }
+
+  .social-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,112 @@
+:root {
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --GreyBg: hsl(0, 0%, 96%);
+  --GreyText: rgb(190, 190, 100);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+.about {
+  .secContainer {
+    .title {
+      color: var(--blackColor);
+      line-height: 1.5rem;
+      padding-bottom: 0.5rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .mainContent {
+      gap: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+      .singleItem {
+        text-align: center;
+
+        img {
+          background: rgba(247, 144, 54, 0.265);
+          width: 100px;
+          border-radius: 50%;
+          padding: 1rem;
+        }
+
+        h3 {
+          color: var(--blackColor);
+          font-weight: 700;
+          padding: 0.5rem;
+        }
+
+        p {
+          color: var(--textColor);
+          padding-bottom: 0.5rem;
+          font-weight: 500;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .videoCard {
+      margin-top: 2rem;
+      background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.619),
+          rgba(0, 0, 0, 0.922)
+        ),
+        url(../../Asset/mountain.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .cardContent {
+        display: flex;
+        flex-direction: row-reverse; 
+        gap: 2rem;
+        padding: 2rem 1rem;
+
+        .cardText {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h2 {
+            color: var(--whiteColor);
+            font-weight: 600;
+            padding-bottom: 1rem;
+          }
+
+          p {
+            color: var(--whiteColor);
+            opacity: 0.7;
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 1px;
+          }
+        }
+
+        .cardVideo {
+          flex: 1;
+
+          video {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            overflow: hidden;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about .secContainer .videoCard .cardContent {
+    flex-direction: column;
+  }
+}
